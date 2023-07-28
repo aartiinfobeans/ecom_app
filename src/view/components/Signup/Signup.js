@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-import { Paper, TextField, Typography } from "@mui/material";
-import TextInput from "../Common/TextInput/TextInput";
-import Button from "../Common/FilledButton/FilledButton";
-import { registerUser } from "../../service/authService.js/auth";
+import { Paper, Typography } from "@mui/material";
+import TextInput from "./../../common/TextInput/TextInput";
+import Button from "./../../common/FilledButton/FilledButton";
+import { registerUser } from "../../../service/authService/auth";
 
 const Signup = (props) => {
   const [username, setUsername] = useState();

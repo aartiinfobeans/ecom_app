@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import "./Login.css";
 import { Grid, Paper, Avatar, Typography, Box } from "@mui/material";
-import { useNavigate } from "react-router-dom";
-
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
-import Signup from "../Signup/Signup";
-import TextInput from "../Common/TextInput/TextInput";
-import FilledButton from "../Common/FilledButton/FilledButton";
-import { loginUser } from "../../service/authService.js/auth";
+import Signup from "../Signup";
+import TextInput from "./../../common/TextInput/TextInput";
+import FilledButton from "./../../common/FilledButton/FilledButton";
+import { useNavigate } from "react-router-dom";
 
 const Login = ({ setToken }) => {
   const [username, setUsername] = useState("");
@@ -16,7 +14,6 @@ const Login = ({ setToken }) => {
 
   const [isSignUp, setIsSignUp] = useState(false);
   const navigate = useNavigate();
-
   const paperStyle = {
     padding: 20,
     height: "70vh",
@@ -29,16 +26,10 @@ const Login = ({ setToken }) => {
   const bgImage =
     "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHdlYnxlbnwwfHwwfHw%3D&w=1000&q=80";
 
-  const handleSubmit = async () => {
-    const params = { username, password };
-    console.log("login params:::", params);
-    const token = await loginUser(params);
-    console.log("token ****", token);
-    if (token.success) {
-      console.log("navigate to dashboard");
-      navigate("/dashboard");
-    }
+  const handleSubmit = () => {
+    const token = "1234#";
     setToken(token);
+    navigate("dashboard");
   };
 
   const onUserNameChange = (user) => {

@@ -1,5 +1,5 @@
 import React from "react";
-import FilledButton from "../Common/FilledButton/FilledButton";
+import FilledButton from "../../common/FilledButton/FilledButton";
 
 const Dashboard = ({ removeToken }) => {
   return (
