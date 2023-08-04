@@ -1,0 +1,19 @@
+.content_title {
+  font-family: "ITCNovareseMed", sans-serif !important;
+  line-height: 120% !important;
+  font-size: 2.8rem !important;
+}
+.content_button {
+  width: 200px;
+  height: 40px;
+  background-color: "white";
+  margin-right: 10px;
+  border-width: 0px;
+  box-shadow: 15px 15px 15px -15px grey;
+  font-size: 1rem !important;
+  font-weight: bold;
+}
+.myImg {
+  height: 700px;
+  object-fit: fill;
+}
